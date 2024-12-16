@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="container">
+    <div id="detail-container">
+      <div id="sign-in" class="details">
+        <div class="heading">Sign In</div>
+        <form action="#">
+          <input type="email" class="textform" placeholder="Email" />
+          <input type="password" class="textform" placeholder="Password" />
+          <a href="">Forgot your password?</a>
+          <input type="button" value="Sign In" />
+        </form>
+      </div>
+      <div id="create-account" class="details">
+        <div class="heading">Create Accounnt</div>
+        <form action="#">
+          <input type="text" class="textform" placeholder="Name" />
+          <input type="email" class="textform" placeholder="Email" />
+          <input type="password" class="textform" placeholder="Password">
+          <input type="button" value="Sign Up">
+        </form>
+      </div>
+    </div>
+    <div id="message-container">
+      <div id="sign-in-message" class="messages">
+        <div>Welcome, back!</div>
+        <div>To keep connected with us please login<br /> with your personal info</div>
+        <label for="sign-in-btn">
+          <input type="radio" name="buttons" id="sign-in-btn" /> Sign In
+        </label>
+      </div>
+      <div id="sign-up-message" class="messages">
+        <div>Hello, friend</div>
+        <div>Enter your personal details and start<br /> journey with us</div>
+        <label for="sign-up-btn">
+          <input type="radio" name="buttons" id="sign-up-btn" /> Sign Up
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

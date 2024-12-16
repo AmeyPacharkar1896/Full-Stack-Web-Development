@@ -1,0 +1,321 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body.theme-blue {
+	background-color: #cce3fc;
+	/* Light Blue */
+	color: #334a84;
+	/* Dark Blue */
+}
+
+body.theme-green {
+	background-color: #ccffcc;
+	/* Light Green */
+	color: #387c41;
+	/* Dark Green */
+}
+
+body {
+	transition: background-color 0.5s ease, color 0.5s ease;
+	overflow: hidden;
+	font-weight: bold;
+}
+
+body.theme-blue #toggle-button,
+body.theme-blue #answer,
+body.theme-blue #formula-button {
+	background-color: #334a84;
+}
+
+body.theme-green #toggle-button,
+body.theme-green #answer,
+body.theme-green #formula-button {
+	background-color: #387c41;
+}
+
+body.theme-blue input {
+	background-color: white;
+	color: #334a84;
+}
+
+body.theme-green input {
+	background-color: white;
+	color: #387c41;
+}
+
+#formula-button {
+	height: 30px;
+	width: 90px;
+	border-radius: 10px;
+	font-weight: 400;
+	color: wheat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+}
+
+/* .display-none {
+	display: none;
+}
+
+.display-.flex {
+	display: flex;
+} */
+
+#formula-container {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background-color: rgba(128, 128, 128, 0.563);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+#formula-div {
+	width: 80%;
+	height: 40%;
+	border-radius: 10px;
+	font-size: x-large;
+	background-color: wheat;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#container {
+	width: 100%;
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#header {
+	/* margin-bottom: 20px; */
+	font-size: x-large;
+	display: flex;
+}
+
+#header>p {
+	/* border-bottom: 1px solid rgba(51, 61, 137, 0.892); */
+	margin-right: 12px;
+	order: -1;
+}
+
+#toggle {
+	height: 20px;
+	width: 50px;
+	background-color: wheat;
+	border-radius: 10px;
+	position: relative;
+	cursor: pointer;
+}
+
+#toggle-button {
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	position: absolute;
+	right: 0;
+	transition: left 0.3s ease-in-out;
+	/* background-color: #334a84; */
+}
+
+.translate-toggle {
+	animation: translateToggleButton 0.5s forwards;
+}
+
+.translate-back-toggle {
+	animation: translateBackToggleButton 0.5s forwards;
+}
+
+label {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+}
+
+form {
+	width: 340px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+}
+
+input {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+#answers {
+	width: 70%;
+	height: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* background-color: rgb(155, 180, 220); */
+	/* color: rgba(51, 61, 137, 0.892); */
+	font-weight: bold;
+	font-size: large;
+	box-shadow: 2px 2px 10px rgb(17, 30, 73);
+}
+
+@keyframes translateToggleButton {
+	0% {
+		right: 0;
+	}
+
+	100% {
+		right: 60%;
+	}
+}
+
+@keyframes translateBackToggleButton {
+	0% {
+		left: 0%;
+	}
+
+	100% {
+		left: 60%;
+	}
+}

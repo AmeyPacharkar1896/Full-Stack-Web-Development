@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div id="product-detail-container">
+    <!-- Product details will be dynamically injected here -->
+  </div>
+  <button class="detail-add-to-cart">Add to Cart</button>
+
+  <div id="cart-dropdown" class="display-none">
+    <button type="button" id="close-open-button">></button>
+    <div id="cart-items">
+      <!-- Cart items will be dynamically injected here -->
+    </div>
+    <div>
+      <p>Items in Cart: <span id="cart-item-count">0</span></p>
+      <button type="button" id="view-cart-button">View Cart</button>
+    </div>
+  </div>
+
+  <script type="module" src="../logic/detail_screen_logic.js"></script>
+</body>
+</html>

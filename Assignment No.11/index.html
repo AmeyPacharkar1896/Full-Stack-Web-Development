@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Website</title>
+  <!-- Updated CSS path -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div id="open-sidebar-button">Categories</div>
+    <div id="search-container">
+      <span id="search-icon">
+        <!-- Updated image path -->
+        <img src="assets/image.png" alt="search-icon">
+      </span>
+      <input type="search" name="product-search-bar" placeholder="Enter product..." id="product-search-bar">
+    </div>
+  </nav>
+
+  <div id="product-container"></div>
+
+  <div id="cart-dropdown">
+    <button type="button" id="close-open-button">></button>
+    <div id="cart-items"></div>
+    <div>
+      <p>Items in Cart: <span id="cart-item-count">0</span></p>
+      <button type="button" id="view-cart-button">View Cart</button>
+    </div>
+  </div>
+
+  <div id="category-side-bar" class="hide"></div>
+
+  <!-- Updated script path -->
+  <script type="module" src="logic/script.js"></script>
+</body>
+
+</html>

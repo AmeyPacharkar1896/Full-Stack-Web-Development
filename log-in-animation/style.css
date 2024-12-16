@@ -1,0 +1,365 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto";
+}
+
+#container {
+  margin-top: 8%;
+  width: 1000px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 5px 5px 20px grey;
+  position: relative;
+  border-radius: 4px;
+}
+
+#detail-container,
+#message-container {
+  background-color: white;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 4px;
+}
+
+#message-container {
+  background-color: red;
+  left: 50%;
+  right: 0;
+  z-index: 1;
+}
+
+#message-container>div>div:first-child {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.messages,
+.details {
+  height: 300px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  /* background-color: aqua; */
+  text-align: center;
+}
+
+.details {
+  color: black;
+}
+
+form {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  width: 400px;
+  height: 30px;
+  background-color: rgb(178, 177, 177);
+  color: rgb(109, 109, 109);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="button"] {
+  width: 150px;
+  background-color: red;
+  border-radius: 15px;
+  color: white;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(109, 109, 109);
+}
+
+#sign-in-message {
+  display: none;
+}
+
+#create-account {
+  display: none;
+}
+
+/* sign-up-button */
+#message-container:has(#sign-up-btn:checked) {
+  animation-name: move-message-card-backwards;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0, 0, 0, 0);
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+#container:has(#sign-up-btn:checked) #detail-container {
+  animation-name: move-sign-in-card;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0, 0, 0, 0);
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+#message-container:has(#sign-up-btn:checked) #sign-in-message,
+#container:has(#sign-up-btn:checked) #detail-container #create-account {
+  display: flex;
+}
+
+#sign-up-message:has(#sign-up-btn:checked),
+#container:has(#sign-up-btn:checked) #detail-container #sign-in {
+  display: none;
+}
+
+/* sign-in-button */
+#message-container:has(#sign-in-btn:checked) {
+  left: 0;
+  animation-name: move-message-card-forwards;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0, 0, 0, 0);
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+#container:has(#sign-in-btn:checked) #detail-container {
+  left: 50%;
+  right: 0;
+  animation-name: move-create-account-card;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0, 0, 0, 0);
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+#message-container:has(#sign-in-btn:checked) #sign-up-message,
+#container:has(#sign-in-btn:checked) #detail-container #sign-in {
+  display: flex;
+}
+
+#sign-in-message:has(#sign-in-btn:checked),
+#container:has(#sign-in-btn:checked) #detail-container #create-account {
+  display: none;
+}
+
+
+#container:has(#sign-in-btn:checked) #detail-container #sign-in {
+  display: flex;
+}
+
+
+@keyframes move-message-card-backwards {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes move-sign-in-card {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(50%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes move-message-card-forwards {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(50%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes move-create-account-card {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

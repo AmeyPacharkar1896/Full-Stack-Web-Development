@@ -1,0 +1,11 @@
+div {
+	width: 100%;
+	height: 100vh;
+
+	/* font-size: 30px; */
+	/* font-family: 'Tinos-Italic'; */
+	background-color: bisque;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

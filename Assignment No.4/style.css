@@ -1,0 +1,188 @@
+@font-face {
+  font-family: 'Kanit';
+  src: url('assets/kanit/Kanit-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kanit-Italic';
+  src: url('assets/kanit/Kanit-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nerko-One';
+  src: url('assets/nerko_one/NerkoOne-Regular.ttf') format('truetype');
+}
+
+* {
+  scroll-behavior: smooth;
+  /* overflow: hidden; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* background-image: url(photos/space_background.avif);
+  backdrop-filter: blur(90px);
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  font-family: 'Kanit';
+  /* scroll-behavior: smooth; */
+  /* margin-top: 40px; */
+}
+
+
+nav {
+  padding: 12px 0px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #001d3d;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: inline-block;
+  width: 45%;
+}
+
+.nav-left a {
+  padding-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-family: 'Nerko-One';
+  font-size: 30px;
+}
+
+.nav-right {
+  text-align: end;
+  display: inline-block;
+  width: 50%;
+}
+
+.nav-right a {
+  display: inline-block;
+  /* margin-left: 50%; */
+  text-align: right;
+  text-decoration: none;
+  color: white;
+  font-family: 'Kanit-Italic';
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.button {
+  /* display: inline-block; */
+  position: sticky;
+  left: 89%;
+  top: 90%;
+  /* right: 11%;
+  bottom: 10%;  */
+  background-color: #04aa6d;
+  text-decoration: none;
+  color: white;
+  font-family: 'Kanit';
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  z-index: 1000;
+  width: 130px;
+  height: 35px;
+}
+
+.button img {
+  vertical-align: middle;
+  margin: auto 0px;
+  display: inline;
+}
+
+.button p {
+  vertical-align: middle;
+  margin: auto 0px;
+  /* padding: 0;  */
+  display: inline-block;
+  /* width: 100px; */
+}
+
+.input_button {
+  width: 300px;
+  height: 30px;
+}
+
+label {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-family: 'Kanit';
+}
+
+input {
+  font-size: 14px;
+}
+
+.galaxy_text {
+  color: white;
+}
+
+#mail {
+  color: cornflowerblue;
+  font-family: 'Kanit';
+
+}
+
+.section-navigator {
+  position: sticky;
+  left: 89%;
+  top: 40%;
+  padding: 8px;
+  border: none;
+  z-index: 1000;
+  width: 130px;
+  height: 35px;
+}
+
+.section-navigator a {
+  text-decoration: none;
+  color: cornflowerblue;
+  font-family: 'Kanit';
+  font-size: 20px;
+}
+
+.section-navigator a:active, .section-navigator a:hover {
+  font-size: 24px;
+}
+
+
+/* #parent-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.container {
+  height: 100vh;
+  scroll-snap-align: start;
+} */
+
+p {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+ul {
+  font-size: 18px;
+}

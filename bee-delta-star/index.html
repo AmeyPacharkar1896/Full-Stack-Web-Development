@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star-Delta Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+</head>
+
+<body class="theme-blue">
+  <div id="formula-button">Formula</div>
+  <div id="formula-container">
+    <div id="formula-div">
+
+    </div>
+  </div>
+  <div id="container" class="toggle-back-theme">
+    <div id="header">
+      <!-- <p>Delta to Star Converter</p> -->
+      <div id="toggle">
+        <div id="toggle-button"></div>
+      </div>
+    </div>
+    <form>
+      <label for="r1">R1
+        <input type="number" name="r1" id="r1" value="50">
+        <input type="range" id="r1" name="r1" min="0" max="100" value="50">
+      </label>
+      <label for="r2">R2
+        <input type="number" name="r2" id="r2" value="50">
+        <input type="range" id="r2" name="r2" min="0" max="100" value="50">
+      </label>
+      <label for="r3">R3
+        <input type="number" name="r3" id="r3" value="50">
+        <input type="range" id="r3" name="r3" min="0" max="100" value="50">
+      </label>
+      <label>
+        <!-- <input type="button" value="Submit" /> -->
+      </label>
+    </form>
+
+    <div id="answers"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
